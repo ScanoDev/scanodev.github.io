@@ -195,4 +195,24 @@ const ABOUT = {
       value: { en: "Spanish (native), English", es: "Español (nativo), inglés" },
     },
   ],
+  // HERRAMIENTAS: agrega, quita o cambia elementos de cada lista.
+  // Para crear otra categoría, copia un bloque { label, items }.
+  tools: [
+    {
+      label: { en: "Languages", es: "Lenguajes" },
+      items: ["Python", "SQL"],
+    },
+    {
+      label: { en: "ML / AI", es: "ML / IA" },
+      items: ["NumPy", "Pandas", "PyTorch", "Prophet", "LSTM", "N-HiTS", "OpenAI API", "RAG"],
+    },
+    {
+      label: { en: "Apps & platforms", es: "Apps y plataformas" },
+      items: ["Streamlit", "ServiceNow", "Now Assist", "Lusha"],
+    },
+    {
+      label: { en: "Cloud & tools", es: "Nube y herramientas" },
+      items: ["Azure Blob Storage", "Git", "GitHub"],
+    },
+  ],
 };

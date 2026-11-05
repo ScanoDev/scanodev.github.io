@@ -120,7 +120,9 @@ function renderProjects() {
 
 function renderAbout() {
   const facts = ABOUT.facts.map((f) => `
-    <div class="fact"><dt>${t(f.label)}</dt><dd>${t(f.value)}</dd></div>`).join("");
+    <div class="fact"><dt>${t(f.label)}</dt><dd>${t(f.value)}</dd></div>`).join("")
+    + (ABOUT.tools || []).map((g) => `
+    <div class="fact"><dt>${t(g.label)}</dt><dd>${(g.items || []).join(" / ")}</dd></div>`).join("");
   return `<div class="grid"><p class="about-text">${t(ABOUT.text)}</p><dl class="facts">${facts}</dl></div>`;
 }
 
