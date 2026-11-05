@@ -3,39 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Sebastián Cano Rincón | ML Engineer</title>
+  <meta name="description" content="Portfolio of Sebastián Cano Rincón, Systems Engineer focused on Machine Learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <span class="logo">ScanoDev</span>
-      <button id="langBtn" class="lang-btn"></button>
-    </nav>
+  <div class="page" id="top">
 
-    <header>
-      <h1 id="name"></h1>
-      <p class="tag" id="tagline"></p>
-      <p class="about" id="about"></p>
-      <div class="links" id="links"></div>
+    <!-- Barra superior -->
+    <div class="topbar grid">
+      <span class="col-a" id="top-name"></span>
+      <span class="col-b" id="top-role"></span>
+      <span class="col-c" id="top-location"></span>
+      <div class="col-d lang">
+        <button data-lang="en">EN</button><span>/</span><button data-lang="es">ES</button>
+      </div>
+    </div>
+
+    <!-- Portada con el mapa -->
+    <header class="hero">
+      <h1 class="hero-name" id="name"></h1>
+      <div class="grid hero-body">
+        <div class="hero-text">
+          <p class="hero-tagline" id="tagline"></p>
+          <p class="hero-intro" id="intro"></p>
+          <div class="hero-links" id="links"></div>
+        </div>
+        <div class="hero-map">
+          <div class="map" id="map"></div>
+          <p class="map-hint" id="map-hint"></p>
+          <ol class="legend" id="legend"></ol>
+        </div>
+      </div>
     </header>
 
-    <section>
-      <h2 id="prof-title"></h2>
-      <p class="sub" id="prof-sub"></p>
-      <div class="grid" id="prof-grid"></div>
-    </section>
+    <!-- Las secciones se dibujan desde js/main.js usando js/content.js -->
+    <main id="sections"></main>
 
-    <section>
-      <h2 id="pers-title"></h2>
-      <p class="sub" id="pers-sub"></p>
-      <div class="grid" id="pers-grid"></div>
-    </section>
-
-    <footer id="footer"></footer>
+    <footer class="footer grid">
+      <span class="col-a" id="footer-name"></span>
+      <span class="col-b">Map data: BFS, GEOSTAT</span>
+      <a class="col-d" href="#top" id="footer-top"></a>
+    </footer>
   </div>
 
+  <script src="js/map.js"></script>
   <script src="js/content.js"></script>
   <script src="js/main.js"></script>
 </body>
