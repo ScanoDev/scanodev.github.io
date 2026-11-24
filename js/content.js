@@ -14,12 +14,12 @@ const PROFILE = {
     es: "Abierto a roles de ML e ingeniería de IA",
   },
   tagline: {
-    en: "Systems Engineer building machine learning and AI systems, from the data to deployment.",
-    es: "Ingeniero de Sistemas que construye sistemas de machine learning e IA, desde los datos hasta el despliegue.",
+    en: "Data Science, Machine Learning, Time Series and Generative AI, from the data to deployment.",
+    es: "Ciencia de datos, Machine Learning, series de tiempo e IA generativa, desde los datos hasta el despliegue.",
   },
   intro: {
-    en: "Experience in time series forecasting, RAG, AI agents and data engineering on AWS and Azure. Focused on LLMs and computer vision.",
-    es: "Experiencia en pronóstico de series de tiempo, RAG, agentes de IA e ingeniería de datos en AWS y Azure. Enfocado en LLMs y visión artificial.",
+    en: "Production experience in time series forecasting and anomaly detection, AI agents, RAG and data pipelines on AWS and Azure.",
+    es: "Experiencia en producción con pronóstico de series de tiempo y detección de anomalías, agentes de IA, RAG y pipelines de datos en AWS y Azure.",
   },
   email: "sebastiancano21@hotmail.es",
   // Pon tu CV en la carpeta del repo con este nombre para que el botón funcione
@@ -84,19 +84,21 @@ const EXPERIENCE = [
   {
     org: "ITSTK",
     place: "Medellín",
-    dates: { en: "Jul 2026 – Oct 2026", es: "Jul 2026 – Oct 2026" },
+    dates: { en: "Jul 2026 – Sep 2026", es: "Jul 2026 – Sep 2026" },
     role: { en: "Consulting Engineer", es: "Ingeniero consultor" },
     bullets: {
       en: [
-        "Designed an AI agent to find and qualify potential clients for the company.",
-        "Integrated generative AI workflows into the ServiceNow platform for clients.",
+        "Built a B2B lead prospecting AI agent in Python (OpenAI API, Lusha API, Streamlit) that finds and enriches potential clients and syncs them into the ServiceNow CRM via OAuth 2.0, with deduplication and a modular architecture.",
+        "Contributed to enabling generative AI (Now Assist) in ServiceNow Strategic Portfolio Management for an enterprise telecom client: LLM setup, access governance, AI assisted demand management, project plan generation and status reports.",
+        "Wrote user stories and unit tests for the MVP and presented progress to the client's IT committee.",
       ],
       es: [
-        "Diseñé un agente de IA para encontrar y calificar clientes potenciales para la empresa.",
-        "Integré flujos de IA generativa en la plataforma ServiceNow para clientes.",
+        "Construí un agente de IA de prospección B2B en Python (OpenAI API, Lusha API, Streamlit) que encuentra y enriquece clientes potenciales y los sincroniza con el CRM de ServiceNow vía OAuth 2.0, con deduplicación y arquitectura modular.",
+        "Contribuí a habilitar IA generativa (Now Assist) en ServiceNow Strategic Portfolio Management para un cliente empresarial de telecomunicaciones: configuración del LLM, gobierno de accesos, gestión de demanda asistida por IA, generación de planes de proyecto y reportes de estado.",
+        "Escribí historias de usuario y pruebas unitarias del MVP y presenté avances al comité de TI del cliente.",
       ],
     },
-    tags: ["Python", "OpenAI API", "ServiceNow", "Now Assist"],
+    tags: ["Python", "OpenAI API", "Lusha", "Streamlit", "ServiceNow", "Now Assist"],
   },
   {
     org: "ISAGEN S.A.",
@@ -105,23 +107,21 @@ const EXPERIENCE = [
     role: { en: "Data Science Intern", es: "Practicante de ciencia de datos" },
     bullets: {
       en: [
-        "Built predictive maintenance models for industrial assets with Prophet, LSTM, N-HiTS and SARIMAX for early anomaly detection.",
-        "Designed and maintained Python ETL pipelines processing hourly Parquet data from Azure Blob Storage.",
-        "Built an internal analytics portal in Power Pages with vibration analysis, anomaly detection and NLP modules.",
-        "Built an end to end Power Apps app where analysts report anomalies, Power Automate routes them to plant teams and AI analyzes each report.",
-        "Designed Power BI dashboards to monitor oil condition in industrial machines against alert and critical limits.",
+        "Developed and deployed production predictive maintenance models for industrial assets with time series forecasting (Prophet, LSTM, N-HiTS, SARIMAX) for early anomaly detection.",
+        "Designed and maintained production Python ETL pipelines processing hourly Parquet data from Azure Blob Storage to feed machine learning workflows.",
+        "Built an internal analytics portal integrating vibration analysis, anomaly detection and NLP modules.",
+        "Automated condition monitoring with Power Automate, Power BI dashboards and a Power Apps tool that streamlines anomaly validation between analysts and reviewers.",
         "Gave digital transformation and AI trainings and advisory at three power plants, helping teams automate their processes.",
       ],
       es: [
-        "Construí modelos de mantenimiento predictivo para activos industriales con Prophet, LSTM, N-HiTS y SARIMAX para detectar anomalías a tiempo.",
-        "Diseñé y mantuve pipelines ETL en Python que procesaban datos Parquet horarios desde Azure Blob Storage.",
-        "Construí un portal analítico interno en Power Pages con módulos de análisis de vibraciones, detección de anomalías y NLP.",
-        "Construí una app end to end en Power Apps donde los analistas reportan anomalías, Power Automate las envía a los equipos de planta y la IA analiza cada reporte.",
-        "Diseñé tableros en Power BI para monitorear la condición de aceites de máquinas industriales frente a límites de alerta y críticos.",
+        "Desarrollé y desplegué en producción modelos de mantenimiento predictivo para activos industriales con pronóstico de series de tiempo (Prophet, LSTM, N-HiTS, SARIMAX) para detectar anomalías a tiempo.",
+        "Diseñé y mantuve pipelines ETL en Python en producción que procesan datos Parquet horarios desde Azure Blob Storage para alimentar flujos de machine learning.",
+        "Construí un portal analítico interno que integra análisis de vibraciones, detección de anomalías y módulos de NLP.",
+        "Automaticé el monitoreo de condición con Power Automate, tableros de Power BI y una herramienta en Power Apps que agiliza la validación de anomalías entre analistas y revisores.",
         "Di capacitaciones y asesorías en transformación digital e IA en tres centrales, ayudando a los equipos a automatizar sus procesos.",
       ],
     },
-    tags: ["Python", "Prophet", "LSTM", "N-HiTS", "Azure", "Power Platform", "Power BI"],
+    tags: ["Python", "Prophet", "LSTM", "N-HiTS", "SARIMAX", "Azure", "Power Platform", "Power BI"],
   },
   {
     org: "Universidad EAFIT",
@@ -274,10 +274,10 @@ const PERSONAL = [
     image: "img/emotion.svg",
     title: { en: "Emotion recognition", es: "Reconocimiento de emociones" },
     description: {
-      en: "Computer vision model that classifies facial emotions, trained on FER2013.",
-      es: "Modelo de visión artificial que clasifica emociones faciales, entrenado con FER2013.",
+      en: "A 5 class CNN trained with PyTorch on FER2013 to classify emotions from facial images.",
+      es: "Una CNN de 5 clases entrenada con PyTorch sobre FER2013 para clasificar emociones a partir de imágenes de rostros.",
     },
-    tags: ["Python", "CNN", "FER2013"],
+    tags: ["Python", "PyTorch", "CNN", "FER2013"],
     links: [],
   },
   {
@@ -407,8 +407,8 @@ const CERTS = [
 // ============================================================
 const ABOUT = {
   text: {
-    en: "I'm a Systems Engineering student at Universidad EAFIT, graduating in December 2026, with an emphasis in Data Science and Analytics. I found my path in AI during a university project forecasting weather with transformers, and since then I've worked on forecasting, generative AI, agents and RAG. My goal is to use AI to make a real, positive difference in people's lives.",
-    es: "Soy estudiante de Ingeniería de Sistemas en la Universidad EAFIT, con énfasis en Ciencia de Datos y Analítica, y me gradúo en diciembre de 2026. Descubrí mi camino en la IA en un proyecto universitario de pronóstico del clima con transformers, y desde entonces he trabajado en pronóstico, IA generativa, agentes y RAG. Mi meta es usar la IA para cambiar vidas para bien.",
+    en: "I'm a Systems Engineering student at Universidad EAFIT, graduating in November 2026, with an emphasis in Data Science and Analytics. I found my path in AI during a university project forecasting weather with transformers, and since then I've worked on forecasting, generative AI, agents and RAG. My goal is to use AI to make a real, positive difference in people's lives.",
+    es: "Soy estudiante de Ingeniería de Sistemas en la Universidad EAFIT, con énfasis en Ciencia de Datos y Analítica, y me gradúo en noviembre de 2026. Descubrí mi camino en la IA en un proyecto universitario de pronóstico del clima con transformers, y desde entonces he trabajado en pronóstico, IA generativa, agentes y RAG. Mi meta es usar la IA para cambiar vidas para bien.",
   },
   swiss: {
     en: "This site follows Swiss design, a tradition built on clarity and precision, the same values I bring to my work. It is also a nod to Switzerland, a country I deeply admire and where I hope to study someday.",
@@ -418,15 +418,22 @@ const ABOUT = {
     {
       label: { en: "Education", es: "Formación" },
       value: {
-        en: "B.S. Systems Engineering, Universidad EAFIT (2022 – 2026)",
-        es: "Ingeniería de Sistemas, Universidad EAFIT (2022 – 2026)",
+        en: "B.S. Systems Engineering (Computer Science), focus on Data Science and Analytics, Universidad EAFIT. Expected Nov 2026",
+        es: "Ingeniería de Sistemas, énfasis en Ciencia de Datos y Analítica, Universidad EAFIT. Grado esperado: nov. 2026",
       },
     },
     {
-      label: { en: "Research & groups", es: "Investigación y grupos" },
+      label: { en: "Online learning", es: "Formación en línea" },
       value: {
-        en: "Competitive Programming group (C++, 1.5 years). SIMPRO research group (1 year).",
-        es: "Semillero de Programación Competitiva (C++, 1,5 años). Grupo de investigación SIMPRO (1 año).",
+        en: "DeepLearning.AI: Machine Learning Specialization. Deep Learning Specialization (in progress, expected Nov 2026)",
+        es: "DeepLearning.AI: Machine Learning Specialization. Deep Learning Specialization (en curso, nov. 2026)",
+      },
+    },
+    {
+      label: { en: "Extracurricular", es: "Extracurricular" },
+      value: {
+        en: "Competitive Programming Research Group, EAFIT (1.5 years): solved and designed problems in C++.",
+        es: "Semillero de Programación Competitiva, EAFIT (1,5 años): resolví y diseñé problemas en C++.",
       },
     },
     {
@@ -437,24 +444,24 @@ const ABOUT = {
   // HABILIDADES: agrega, quita o cambia elementos de cada lista.
   tools: [
     {
-      label: { en: "Languages", es: "Lenguajes" },
-      items: ["Python", "SQL", "C++"],
+      label: { en: "Programming languages", es: "Lenguajes" },
+      items: ["Python", "SQL (PostgreSQL)", "C++", "R (basic)"],
     },
     {
-      label: { en: "ML / AI", es: "ML / IA" },
-      items: ["PyTorch", "Hugging Face", "Prophet", "LSTM", "N-HiTS", "NumPy", "Pandas"],
+      label: { en: "ML & statistics", es: "ML y estadística" },
+      items: ["Time Series Forecasting", "Anomaly Detection", "Statistics", "PyTorch", "Deep Learning", "NLP", "Computer Vision", "Reinforcement Learning"],
     },
     {
       label: { en: "LLMs & agents", es: "LLMs y agentes" },
-      items: ["LangChain", "LangGraph", "LangSmith", "RAG", "OpenAI API", "Amazon Bedrock"],
+      items: ["LangChain", "LangGraph", "LangSmith", "Hugging Face", "RAG", "OpenAI API", "Firecrawl"],
     },
     {
       label: { en: "Data & cloud", es: "Datos y nube" },
-      items: ["AWS (S3, Glue, Athena, EC2)", "PySpark", "Iceberg", "Azure", "PostgreSQL", "Firecrawl"],
+      items: ["AWS (S3, IAM, Glue, Athena, Lambda, Kinesis, Step Functions, EC2)", "Data Warehousing", "Spark", "Azure Blob Storage", "FastAPI", "Streamlit"],
     },
     {
-      label: { en: "Apps & tools", es: "Apps y herramientas" },
-      items: ["FastAPI", "Streamlit", "Docker", "Git", "ServiceNow", "Power Platform", "Power BI", "Grafana"],
+      label: { en: "Tools & platforms", es: "Herramientas y plataformas" },
+      items: ["Git", "GitHub", "Docker", "Grafana", "Power BI", "ServiceNow", "Power Automate", "Power Apps"],
     },
   ],
 };
