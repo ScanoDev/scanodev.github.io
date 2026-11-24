@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sebastián Cano Rincón | ML Engineer</title>
-  <meta name="description" content="Portfolio of Sebastián Cano Rincón, Systems Engineer focused on Machine Learning.">
+  <meta name="description" content="Portfolio of Sebastián Cano Rincón, ML and AI Engineer: RAG, AI agents, forecasting and data engineering on AWS.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
@@ -23,8 +23,9 @@
       </div>
     </div>
 
-    <!-- Portada con el mapa -->
+    <!-- Portada -->
     <header class="hero">
+      <p class="available"><span class="dot"></span><span id="available"></span></p>
       <h1 class="hero-name" id="name"></h1>
       <div class="grid hero-body">
         <div class="hero-text">
@@ -32,25 +33,24 @@
           <p class="hero-intro" id="intro"></p>
           <div class="hero-links" id="links"></div>
         </div>
-        <div class="hero-map">
-          <div class="map" id="map"></div>
-          <p class="map-hint" id="map-hint"></p>
+        <nav class="hero-index">
           <ol class="legend" id="legend"></ol>
-        </div>
+        </nav>
       </div>
     </header>
 
     <!-- Las secciones se dibujan desde js/main.js usando js/content.js -->
     <main id="sections"></main>
 
+    <!-- Detalle de proyecto (se llena desde js/main.js) -->
+    <dialog class="modal" id="modal"></dialog>
+
     <footer class="footer grid">
       <span class="col-a" id="footer-name"></span>
-      <span class="col-b">Map data: BFS, GEOSTAT</span>
       <a class="col-d" href="#top" id="footer-top"></a>
     </footer>
   </div>
 
-  <script src="js/map.js"></script>
   <script src="js/content.js"></script>
   <script src="js/main.js"></script>
 </body>
